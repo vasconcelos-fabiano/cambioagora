@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramenta de conversão de moedas - FabianoVasconcelos.com</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Câmbio Agora</h1>
+    <p id="usd">Dólar Americano (USD): R$ </p>
+    <p id="eur">Euro (EUR): R$ </p>
+    <p id="cad">Dólar Canadense (CAD): R$ </p>
+
+    <h2>Converter moedas</h2>
+    <p>
+        R$ <input type="text" name="real" size="10"/>
+        <label for="moedas">equivalem a</label>
+        <select id="moedas">
+            <option value="usd">Dólares Americanos (USD)</option>
+            <option value="eur">Euros (EUR)</option>
+            <option value="can">Dólares Canadenses (CAD)</option>
+        </select>
+        <button type="button">Converter</button>
+    </p>
+    <script src='script.js'></script>
+</body>
+</html>
