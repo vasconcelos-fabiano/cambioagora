@@ -14,14 +14,14 @@
 
     <h2>Converter moedas</h2>
     <p>
-        R$ <input type="text" name="real" size="10"/>
+        R$ <input type="number" step=".01" id="blr" name="real" size="10"/>
         <label for="moedas">equivalem a</label>
         <select id="moedas">
             <option value="usd">Dólares Americanos (USD)</option>
             <option value="eur">Euros (EUR)</option>
-            <option value="can">Dólares Canadenses (CAD)</option>
+            <option value="cad">Dólares Canadenses (CAD)</option>
         </select>
-        <button type="button">Converter</button>
+        <button type="button" onclick="convertRealto()">Converter</button>
     </p>
     <script src='script.js'></script>
 </body>
