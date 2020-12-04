@@ -38,8 +38,6 @@ function convertRealto(){
       result = realValue / cad;
       break;
   }
-
-  console.log(result);
 }
 
 currentUSD = fetchCurrency('USD');

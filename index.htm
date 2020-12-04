@@ -14,9 +14,19 @@
 
     <h2>Converter moedas</h2>
     <p>
-        R$ <input type="number" step=".01" id="blr" name="real" size="10"/>
-        <label for="moedas">equivalem a</label>
-        <select id="moedas">
+        <input type="number" min="0" id="blr" name="real" size="10"/>
+        <label for="de"> De: </label>
+        <select id="moedas1">
+            <option value="any">[ Escolha uma moeda ]</option>
+            <option value="blr">Reais (BLR)</option>
+            <option value="usd">Dólares Americanos (USD)</option>
+            <option value="eur">Euros (EUR)</option>
+            <option value="cad">Dólares Canadenses (CAD)</option>
+        </select>
+        <label for="para"> Para: </label>
+        <select id="moedas2">
+            <option value="any">[ Escolha uma moeda ]</option>
+            <option value="blr">Reais (BLR)</option>
             <option value="usd">Dólares Americanos (USD)</option>
             <option value="eur">Euros (EUR)</option>
             <option value="cad">Dólares Canadenses (CAD)</option>
