@@ -17,8 +17,8 @@ async function fetchCurrency(currency) {
   }
 }
 
-const product = function multiplyCurrency(brl, currency) {
-  return brl * currency;
+const product = function multiplyCurrency(initialvalue, currency) {
+  return initialvalue * currency;
 }
 
 function convertRealto(){
@@ -38,7 +38,16 @@ function convertRealto(){
       result = realValue / cad;
       break;
   }
-}
+    }
+
+var initialvalue = document.getElementById('Value');
+initialvalue.onkeydown = function(e) {
+  if(!((e.keyCode > 95 && e.keyCode < 106)
+    || (e.keyCode > 47 && e.keyCode < 58) 
+    || e.keyCode == 8)) {
+      return false;
+    }
+  }
 
 currentUSD = fetchCurrency('USD');
 currentEUR = fetchCurrency('EUR');
