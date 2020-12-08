@@ -1,17 +1,21 @@
+// Essa parte vai buscar as informações da API
 async function fetchCurrency(currency) {
   const response = await fetch(`https://economia.awesomeapi.com.br/json/${currency}-BRL`);
   const data = await response.json();
 
   if (currency === 'USD'){
-      const currentUSD = data[0].bid.replace(".", ",");
+      let currentUSD = data[0].bid;
+      currentUSD = parseFloat(currentUSD).toFixed(3).replace(".", ",");
       usd = data[0].bid;
       document.querySelector('#usd').insertAdjacentHTML('beforeend', currentUSD);
   } else if (currency === 'EUR'){
-      const currentEUR = data[0].bid.replace(".", ",");
+      let currentEUR = data[0].bid;
+      currentEUR = parseFloat(currentEUR).toFixed(3).replace(".", ",");
       eur = data[0].bid;
       document.querySelector('#eur').insertAdjacentHTML('beforeend', currentEUR);
   } else if (currency === 'CAD'){
-      const currentCAD = data[0].bid.replace(".", ",");
+      let currentCAD = data[0].bid;
+      currentCAD = parseFloat(currentCAD).toFixed(3).replace(".", ",");
       cad = data[0].bid;
       document.querySelector('#cad').insertAdjacentHTML('beforeend', currentCAD);
   }
@@ -49,6 +53,20 @@ initialvalue.onkeydown = function(e) {
     }
   }
 
+var e = document.getElementById('Value');
+function handleAmount(e) {
+  if (e.type === 'keypress' || e.type === 'blur') {
+    if (e.which == 13 || e.keyCode == 13) {
+     realValue = e.target.value;
+     console.log(realValue);
+    }
+  } 
+}
+
 currentUSD = fetchCurrency('USD');
 currentEUR = fetchCurrency('EUR');
 currentCAD = fetchCurrency('CAD');
+
+teste = 78.86663258454;
+teste = parseFloat(teste).toFixed(2);
+document.querySelector('#teste').insertAdjacentHTML('beforeend', teste);
