@@ -26,7 +26,7 @@ const product = function multiplyCurrency(initialvalue, currency) {
 }
 
 function convertRealto(){
-  var realValue = document.querySelector("#blr").value;
+  var realValue = document.querySelector("#brl").value;
   var Currency = document.querySelector("#moedas").value;
 
   let result = 0;
